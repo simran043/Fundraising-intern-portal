@@ -1,0 +1,13 @@
+{
+  "user": {
+    "name": "Simran Kumari",
+    "referralCode": "simran2025",
+    "totalDonations": 5000
+  },
+  "leaderboard": [
+    { "name": "Aman", "donations": 6000 },
+    { "name": "Simran", "donations": 5000 },
+    { "name": "Priya", "donations": 4500 },
+    { "name": "Neha", "donations": 3000 }
+  ]
+}
