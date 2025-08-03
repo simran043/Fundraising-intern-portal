@@ -26,11 +26,8 @@ node index.js
 
 ## 📸 Screenshots 
 
-### Login Page
 ![Login Page](https://raw.githubusercontent.com/simran043/Fundraising-intern-portal/main/screenshort/Login.png)
 
-### Dashboard
 ![Dashboard](https://raw.githubusercontent.com/simran043/Fundraising-intern-portal/main/screenshort/Dashboard.png)
 
-### Leaderboard
 ![Leaderboard](https://raw.githubusercontent.com/simran043/Fundraising-intern-portal/main/screenshort/Leaderboard.png)
