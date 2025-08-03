@@ -27,7 +27,7 @@ node index.js
 ## 📸 Screenshots
 
 ### Login Page
-![Login Page](screenshort/Leaderboard.png)
+![Login Page](https://github.com/simran043/Fundraising-intern-portal/blob/main/screenshort/Leaderboard.png)
 
 ### Dashboard
 ![Dashboard](https://github.com/simran043/Fundraising-intern-portal/blob/main/screenshort/Dashboard.png)
