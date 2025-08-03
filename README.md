@@ -24,16 +24,13 @@ cd server
 npm install
 node index.js
 
-## 📸 Screenshots
+## 📸 Screenshots 
 
 ### Login Page
-![Login Page](https://github.com/simran043/Fundraising-intern-portal/blob/main/screenshort/Leaderboard.png)
+![Login Page](https://raw.githubusercontent.com/simran043/Fundraising-intern-portal/main/screenshort/Login.png)
 
 ### Dashboard
-![Dashboard](https://github.com/simran043/Fundraising-intern-portal/blob/main/screenshort/Dashboard.png)
+![Dashboard](https://raw.githubusercontent.com/simran043/Fundraising-intern-portal/main/screenshort/Dashboard.png)
 
 ### Leaderboard
-![Leaderboard](https://github.com/simran043/Fundraising-intern-portal/blob/main/screenshort/Leaderboard.png)
-
-### Terminal Running Backend
-![Backend](screenshots/backend-terminal.png)
+![Leaderboard](https://raw.githubusercontent.com/simran043/Fundraising-intern-portal/main/screenshort/Leaderboard.png)
