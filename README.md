@@ -17,13 +17,14 @@ A full-stack web dashboard built for interns to track referrals and donations. B
 cd client
 npm install
 npm start
+```
 
 ### Backend
 ```bash
 cd server
 npm install
 node index.js
-
+```
 ## 📸 Screenshots 
 
 ![Login Page](https://raw.githubusercontent.com/simran043/Fundraising-intern-portal/main/screenshort/Login.png)
