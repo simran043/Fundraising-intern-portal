@@ -1,10 +1,10 @@
 # Fundraising-intern-portal
 A full-stack web dashboard built for interns to track referrals and donations. Built using React, Express.js, Tailwind CSS, and dummy backend API.
 
-## 🔗 Live Demo
-[Click here to view](https://your-netlify-link.netlify.app)
+## Live Demo
+🔗 Frontend (Netlify): https://your-netlify-link.netlify.app
+🔗 Backend (Render): https://fundraising-intern-portal-f5d6.onrender.com
 
-## 🛠 Tech Stack
 - React (Frontend)
 - Express.js (Backend)
 - TailwindCSS
