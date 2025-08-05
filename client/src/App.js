@@ -1,25 +1,56 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import Leaderboard from "./pages/Leaderboard";
+import React, { useEffect, useState } from "react";
 
-function App() {
+function Dashboard() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch("https://fundraising-server.onrender.com/api/user")  // 🔁 REPLACE with your deployed backend URL
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Fetched user data:", data);
+        setUser(data);
+      })
+      .catch((err) => {
+        console.error("Error fetching user:", err);
+      });
+  }, []);
+
   return (
-    <Router>
-      <nav className="bg-blue-600 p-4 text-white flex gap-4">
-        <Link to="/" className="hover:underline">Login</Link>
-        <Link to="/dashboard" className="hover:underline">Dashboard</Link>
-        <Link to="/leaderboard" className="hover:underline">Leaderboard</Link>
-      </nav>
+    <div className="min-h-screen bg-gray-100 p-8 font-sans">
+      <h1 className="text-3xl font-bold mb-6">Intern Dashboard</h1>
 
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/leaderboard" element={<Leaderboard />} />
-      </Routes>
-    </Router>
+      {user ? (
+        <div className="space-y-4">
+          <div className="bg-white p-4 rounded-xl shadow-md">
+            <p><span className="font-semibold">Name:</span> {user.name}</p>
+            <p><span className="font-semibold">Referral Code:</span> <code>{user.referralCode}</code></p>
+            <p><span className="font-semibold">Total Donations:</span> ₹{user.totalDonations || 0}</p>
+          </div>
+
+          {/* Rewards Section */}
+          <div className="bg-white p-4 rounded-xl shadow-md mt-6">
+            <h2 className="text-xl font-semibold mb-4">Rewards & Unlockables</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="p-4 bg-yellow-100 rounded-lg shadow-sm">
+                <p className="font-bold">🎖 Bronze Badge</p>
+                <p>Raise ₹1000</p>
+              </div>
+              <div className="p-4 bg-gray-100 rounded-lg shadow-sm">
+                <p className="font-bold">🏅 Silver Badge</p>
+                <p>Raise ₹3000</p>
+              </div>
+              <div className="p-4 bg-orange-100 rounded-lg shadow-sm">
+                <p className="font-bold">🥇 Gold Badge</p>
+                <p>Raise ₹5000+</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <p>Loading user data...</p>
+      )}
+    </div>
   );
 }
 
-export default App;
+export default Dashboard;
