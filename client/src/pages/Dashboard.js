@@ -4,9 +4,10 @@ function Dashboard() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/user")
+    fetch("https://fundraising-backend.onrender.com/api/user") // ✅ REPLACE this URL if yours is different
       .then((res) => res.json())
-      .then((data) => setUser(data));
+      .then((data) => setUser(data))
+      .catch((err) => console.error("Error fetching user:", err));
   }, []);
 
   return (
